@@ -18,7 +18,7 @@ Training the model is relatively straightforward compared to some other types of
 
 To generate new images with a trained model, we begin with a completely random input and repeatedly feed it through the model, updating it each time by a small amount based on the model prediction.
 
-## 🚰 MVP (Minimum Viable Pipeline)
+### 🚰 MVP (Minimum Viable Pipeline)
 
 The core API of Hugging Face Diffusers is divided into three main components:
 
