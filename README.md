@@ -14,7 +14,13 @@ The secret to diffusion models’ success is the iterative nature of the **diffu
   <p>Diffusion process, figure from DDPM paper (https://arxiv.org/abs/2006.11239).</p>
 </div>
 
-Training the model is relatively straightforward compared to some other types of generative model. We repeatedly 1) Load in some images from the training data 2) Add noise, in different amounts. Remember, we want the model to do a good job estimating how to ‘fix’ (denoise) both extremely noisy images and images that are close to perfect. 3) Feed the noisy versions of the inputs into the model 4) Evaluate how well the model does at denoising these inputs 5) Use this information to update the model weights.
+Training the model is relatively straightforward compared to some other types of generative model. We repeatedly 
+
+1. Load in some images from the training data.
+2. Add noise, in different amounts.
+3. Feed the noisy versions of the inputs into the model.
+4. Evaluate how well the model does at denoising these inputs.
+5. Use this information to update the model weights.
 
 To generate new images with a trained model, we begin with a completely random input and repeatedly feed it through the model, updating it each time by a small amount based on the model prediction.
 
