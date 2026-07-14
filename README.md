@@ -36,7 +36,7 @@ The core API of Hugging Face Diffusers is divided into three main components:
 
 The plan for training is to take these input images and add noise to them, then feed the noisy images to the model. And during inference, we will use the model predictions to iteratively remove noise. In `diffusers`, these processes are both handled by the **scheduler**. The noise schedule determines how much noise is added at different timesteps.
 
-#### 🧪 **Forward Process** of a **Diffusion Probabilistic Model** ([DDPMs](https://arxiv.org/abs/2006.11239)):
+#### 🧪 **Forward Process** of a **Diffusion Probabilistic Model**:
 
 **1. The Single Step Transition**
 
@@ -46,7 +46,7 @@ $$
 q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I})
 $$
 
-- **$q(\mathbf{x}_t \vert \mathbf{x}_{t-1})$**: This is the probability distribution of the latent variable $\mathbf{x}_t$ conditioned on the previous latent variable $\mathbf{x}_{t-1}$.
+- $q(\mathbf{x}_t \vert \mathbf{x}_{t-1})$: This is the probability distribution of the latent variable $\mathbf{x}_t$ conditioned on the previous latent variable $\mathbf{x}_{t-1}$.
 
 - **$\mathcal{N}(\dots)$**: Represents a Gaussian (Normal) distribution.
 
@@ -225,7 +225,6 @@ $$
 The equation simplifies directly to:
 
 $$
-
 \mathbf{x}_t = \sqrt{\bar{\alpha}_t} \mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t} \mathbf{\epsilon} \quad \text{where } \mathbf{\epsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})
 $$
 
