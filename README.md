@@ -46,7 +46,7 @@ $$
 q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I})
 $$
 
-- $q(\mathbf{x}_t\vert\mathbf{x}_{t-1})$: This is the probability distribution of the latent variable $x_t$ conditioned on the previous latent variable $x_{t-1}$.
+- $q({x}_t \vert x_{t-1})$: This is the probability distribution of the latent variable $x_t$ conditioned on the previous latent variable $x_{t-1}$.
 
 - **$\mathcal{N}(\dots)$**: Represents a Gaussian (Normal) distribution.
 
@@ -82,7 +82,7 @@ The goal of training a diffusion model is to learn the **reverse process** — l
 
 **4. The Closed-Form Sampling Formula** 
 
-To get $\mathbf{x}_t$ for any $t$ given $\mathbf{x}_0$, there is also another mathematical formulation for the forward (noising) process in Denoising Diffusion Probabilistic Models (DDPMs):
+To get ${x}_t$ for any $t$ given $\mathbf{x}_0$, there is also another mathematical formulation for the forward (noising) process in Denoising Diffusion Probabilistic Models (DDPMs):
 
 $$
 q(\mathbf{x}_t \vert \mathbf{x}_0) = \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1 - \bar{\alpha}_t) \mathbf{I})
@@ -152,7 +152,7 @@ $$
 
 **Step 2: Recursive Substitution**
 
-We can express the previous step, $\mathbf{x}_{t-1}$, in the exact same way using the step before it, $\mathbf{x}_{t-2}$:
+We can express the previous step, ${x}_{t-1}$, in the exact same way using the step before it, ${x}_{t-2}$:
 
 $$
 \mathbf{x}_{t-1} = \sqrt{\alpha_{t-1}} \mathbf{x}_{t-2} + \sqrt{1 - \alpha_{t-1}} \mathbf{\epsilon}_{t-2} \quad \text{where } \mathbf{\epsilon}_{t-2} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})
