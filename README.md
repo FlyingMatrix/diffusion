@@ -46,9 +46,7 @@ $$
 q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I})
 $$
 
-- Test $x_1$ and $x_{t-1}$ and $q(\mathbf{x}_t \mid \mathbf{x}_{t-1})$
-
-- $q(\mathbf{x}_t \vert \mathbf{x}_{t-1})$: This is the probability distribution of the latent variable $x_t$ conditioned on the previous latent variable $x_{t-1}$.
+- **$q(\mathbf{x}_t \vert \mathbf{x}_{t-1})$**: This is the probability distribution of the latent variable $x_t$ conditioned on the previous latent variable $x_{t-1}$.
 
 - **$\mathcal{N}(\dots)$**: Represents a Gaussian (Normal) distribution.
 
@@ -84,7 +82,7 @@ The goal of training a diffusion model is to learn the **reverse process** — l
 
 **4. The Closed-Form Sampling Formula** 
 
-To get $\mathbf{x}_t$ for any $t$ given $\mathbf{x}_0$, there is also another mathematical formulation for the forward (noising) process in Denoising Diffusion Probabilistic Models (DDPMs):
+To get **$\mathbf{x}_t$** for any $t$ given $\mathbf{x}_0$, there is also another mathematical formulation for the forward (noising) process in Denoising Diffusion Probabilistic Models (DDPMs):
 
 $$
 q(\mathbf{x}_t \vert \mathbf{x}_0) = \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1 - \bar{\alpha}_t) \mathbf{I})
