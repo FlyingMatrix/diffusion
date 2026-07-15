@@ -152,7 +152,7 @@ $$
 
 **Step 2: Recursive Substitution**
 
-We can express the previous step, $\mathbf{x}_{t-1}$, in the exact same way using the step before it, $\mathbf{x}_{t-2}$:
+We can express the previous step, **$\mathbf{x}_{t-1}$**, in the exact same way using the step before it, **$\mathbf{x}_{t-2}$**:
 
 $$
 \mathbf{x}_{t-1} = \sqrt{\alpha_{t-1}} \mathbf{x}_{t-2} + \sqrt{1 - \alpha_{t-1}} \mathbf{\epsilon}_{t-2} \quad \text{where } \mathbf{\epsilon}_{t-2} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})
