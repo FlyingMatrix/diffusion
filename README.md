@@ -46,7 +46,7 @@ $$
 q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I})
 $$
 
-- $q(\mathbf{x}_t \vert \mathbf{x}_{t-1})$: This is the probability distribution of the latent variable $x_t$ conditioned on the previous latent variable $x_{t-1}$.
+- **$q(\mathbf{x}_{t} \vert \mathbf{x}_{t-1})$**: This is the probability distribution of the latent variable $x_t$ conditioned on the previous latent variable $x_{t-1}$.
 
 - **$\mathcal{N}(\dots)$**: Represents a Gaussian (Normal) distribution.
 
@@ -66,7 +66,7 @@ $$
 
 - **$\prod^T_{t=1}$**: This represents the product of all individual transition probabilities from $t=1$ to $T$.
 
-- **Markov Chain**: Because the probability of $\mathbf{x}_t$ depends *only* on the immediate previous step $\mathbf{x}_{t-1}$, this forward noising process is a **Markov chain**.
+- **Markov Chain**: Because the probability of $\mathbf{x}_t$ depends *only* on the immediate previous step $x_{t-1}$, this forward noising process is a **Markov chain**.
 
 **3. Summary**
 
