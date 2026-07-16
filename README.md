@@ -48,7 +48,7 @@ $$
 
 - **$q(\mathbf{x}_{1:T} \vert \mathbf{x}_0)$**: The probability of generating the entire sequence ...
 
-- **$q(\mathbf{x}_t \vert \mathbf{x}_{t-1})$**: This is the probability distribution of the latent variable $x_t$ conditioned on the previous latent variable $x_{t-1}$.
+- **$q(x_t \vert x_{t-1})$**: This is the probability distribution of the latent variable $x_t$ conditioned on the previous latent variable $x_{t-1}$.
 
 - **$\mathcal{N}(\dots)$**: Represents a Gaussian (Normal) distribution.
 
