@@ -233,3 +233,15 @@ This confirms that the transition probability distribution from step $0$ directl
 $$
 q(\mathbf{x}_t \vert \mathbf{x}_0) = \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1 - \bar{\alpha}_t) \mathbf{I})
 $$
+
+### 🧬 Define the Model
+
+Most diffusion models use architectures that are some variant of a **U-net**. In a nutshell:
+
+- the model has the input image go through several blocks of ResNet layers, each of which halves the image size by 2.
+- then through the same number of blocks that upsample it again.
+- there are skip connections linking the features on the downsample path to the corresponding layers in the upsample path.
+
+When dealing with higher-resolution inputs you may want to use more down and up-blocks, and keep the attention layers only at the lowest resolution (bottom) layers to reduce memory usage.
+
+A key feature of this model is that it predicts images of the same size as the input.
