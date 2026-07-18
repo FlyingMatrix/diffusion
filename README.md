@@ -245,3 +245,13 @@ Most diffusion models use architectures that are some variant of a **U-net**. In
 When dealing with higher-resolution inputs you may want to use more down and up-blocks, and keep the attention layers only at the lowest resolution (bottom) layers to reduce memory usage.
 
 A key feature of this model is that it predicts images of the same size as the input.
+
+### 📉 Training Loop
+
+In the training loop, for each batch of data, we
+
+- Sample some random timesteps
+- Noise the data accordingly
+- Feed the noisy data through the model
+- Compare the model predictions with the target (i.e. the noise in this case) using mean squared error as our loss function
+- Update the model parameters via `loss.backward()` and `optimizer.step()`
